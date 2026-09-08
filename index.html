@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trisha Tiwari | Finance & Business Analytics</title>
+<meta name="description" content="Portfolio of Trisha Tiwari — BBA Finance and Business Analytics student, with experience in financial analysis, reporting, auditing, investment research and data-driven decision-making.">
+<style>
+:root{
+  --ink:#171717; --muted:#6f6f6f; --paper:#f7f6f2; --card:#ffffff;
+  --line:#dedbd3; --accent:#263b35; --soft:#e9eee9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(247,246,242,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.08em}
+.nav-links{display:flex;gap:28px;font-size:14px;align-items:center}.nav-links a{cursor:pointer}
+.nav-links a:hover{opacity:.55}
+.hero{padding:105px 0 90px;display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:end}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--muted);font-weight:700}
+h1{font-family:Georgia,serif;font-size:clamp(58px,9vw,112px);font-weight:400;line-height:.9;letter-spacing:-.055em;margin:18px 0 28px}
+.hero-copy{font-size:19px;max-width:700px;color:#454545}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:13px 20px;border:1px solid var(--ink);font-size:14px;font-weight:700;transition:.2s}
+.btn.primary{background:var(--ink);color:white}
+.btn:hover{transform:translateY(-2px)}
+.hero-card{border:1px solid var(--line);background:var(--card);padding:30px}
+.hero-card .big{font-family:Georgia,serif;font-size:42px;line-height:1;margin-bottom:10px}
+.hero-card p{color:var(--muted);font-size:14px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.stat{border-top:1px solid var(--line);padding-top:12px}
+.stat b{font-size:24px}.stat span{display:block;color:var(--muted);font-size:12px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:30px;margin-bottom:42px}
+.section-title{font-family:Georgia,serif;font-size:48px;font-weight:400;line-height:1;margin:0}
+.section-kicker{max-width:420px;color:var(--muted);font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.about p{font-size:18px;margin-top:0}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{border:1px solid var(--line);padding:9px 13px;background:white;font-size:13px}
+.timeline{display:grid;gap:0}
+.item{display:grid;grid-template-columns:170px 1fr 110px;gap:28px;padding:28px 0;border-top:1px solid var(--line)}
+.item:first-child{border-top:0;padding-top:0}
+.date{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.item h3{font-size:21px;margin:0 0 7px}
+.item h4{margin:0 0 12px;color:var(--muted);font-size:14px;font-weight:600}
+.item p{margin:0;color:#505050;font-size:15px}
+.tag{text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{background:var(--card);border:1px solid var(--line);padding:30px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
+.project-number{font-size:12px;color:var(--muted)}
+.project h3{font-family:Georgia,serif;font-size:29px;font-weight:400;margin:22px 0 10px}
+.project p{color:#555;margin:0}
+.project .small{font-size:12px;color:var(--muted);margin-top:24px}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.edu-card{background:white;border:1px solid var(--line);padding:26px}
+.edu-card h3{margin:0 0 5px;font-size:18px}.edu-card p{margin:0;color:var(--muted);font-size:14px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill-card{border-top:2px solid var(--ink);padding-top:16px}
+.skill-card h3{margin:0 0 12px}.skill-card p{margin:0;color:var(--muted);font-size:14px}
+.contact{background:var(--accent);color:white;border-top:0}
+.contact .section-title{color:white}
+.contact-copy{max-width:600px;color:#d9dfdb;font-size:18px}
+.contact a{text-decoration:underline;text-underline-offset:4px}
+footer{padding:25px 0;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+@media(max-width:800px){
+  .nav-links{display:flex;gap:14px;font-size:11px;overflow-x:auto;white-space:nowrap;max-width:72%;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}.hero{grid-template-columns:1fr;gap:35px;padding-top:70px}
+  .about,.edu{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}
+  .item{grid-template-columns:1fr;gap:8px}.tag{text-align:left}
+  .section-head{display:block}.section-kicker{margin-top:18px}
+}
+@media(max-width:520px){
+  h1{font-size:62px}.skills{grid-template-columns:1fr}.hero-card{padding:22px}
+  section{padding:65px 0}.section-title{font-size:39px}
+}
+
+.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.profile-card{background:white;border:1px solid var(--line);padding:24px}.profile-card h3{font-family:Georgia,serif;font-size:24px;font-weight:400;margin:0 0 8px}.profile-card p{margin:0;color:#555;font-size:14px}.role-list{margin:18px 0 0;padding-left:18px;color:#555;font-size:14px}.role-list li{margin-bottom:7px}.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.project-meta span{font-size:11px;border:1px solid var(--line);padding:5px 8px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.career-box{margin-top:40px;border:1px solid var(--line);background:var(--card);padding:28px}.career-box h3{font-family:Georgia,serif;font-size:28px;font-weight:400;margin:0 0 10px}.career-box p{margin:0;color:#555;max-width:850px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:20px}.contact-card{border-top:1px solid rgba(255,255,255,.3);padding-top:18px}.contact-card strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#d9dfdb;margin-bottom:5px}.contact-card a{font-size:16px}.contact-note{margin-top:35px;font-size:13px;color:#cbd3ce}@media(max-width:800px){.profile-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#">TT.</a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#snapshot">Snapshot</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container hero">
+  <div>
+    <div class="eyebrow">Finance · Business Analytics · Strategy</div>
+    <h1>Trisha<br>Tiwari</h1>
+    <p class="hero-copy">BBA student at Atlas SkillTech University, majoring in Finance and minoring in Business Analytics. I enjoy turning financial data into practical insights through analysis, reporting, research and structured problem-solving. I enjoy working in teams, collaborating with different people, and contributing positively to group projects.</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://www.linkedin.com/in/trishatiwari26/" target="_blank">View LinkedIn ↗</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <div class="big">01</div>
+    <strong>What I bring</strong>
+    <p>A blend of finance fundamentals, analytical thinking, communication and hands-on exposure to financial reporting and investment research.</p>
+    <div class="stat-grid">
+      <div class="stat"><b>9.24</b><span>Semester 2 GPA</span></div>
+      <div class="stat"><b>2+</b><span>Internship experiences</span></div>
+      <div class="stat"><b>Finance</b><span>Major</span></div>
+      <div class="stat"><b>Analytics</b><span>Minor</span></div>
+    </div>
+  </aside>
+</header>
+
+<section id="snapshot">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Profile snapshot</h2>
+      <p class="section-kicker">A quick overview of my academic focus, professional exposure and the areas where I am building practical capability.</p>
+    </div>
+    <div class="profile-grid">
+      <article class="profile-card"><h3>Finance</h3><p>Core focus through my BBA major, with practical exposure to financial statements, investment data, peer benchmarking, auditing and transaction-cost analysis.</p></article>
+      <article class="profile-card"><h3>Business Analytics</h3><p>Minor focused on turning datasets into structured insights using Excel, formulas, lookups, Pivot Tables, Power BI (currently learning) and analytical problem-solving.</p></article>
+      <article class="profile-card"><h3>Working style</h3><p>Collaborative, dependable and open to different perspectives. I enjoy working in groups, communicating clearly, contributing my share of the work and helping the team move toward a shared goal.</p></article>
+    </div>
+  </div>
+</section>
+
+<main>
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">About me</h2>
+      <p class="section-kicker">Curious about how businesses make decisions — and especially how good data can make those decisions better.</p>
+    </div>
+    <div class="about">
+      <div>
+        <p>I am a second-year BBA student at Atlas SkillTech University, pursuing Finance as my major and Business Analytics as my minor. My interests sit at the intersection of financial analysis, investment research, data and strategy.</p>
+        <p>Through internships and academic projects, I have worked with financial statements, investment data, reporting workflows and Excel-based analysis. I am particularly interested in building practical analytical skills that can solve real business problems.</p>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:15px">Core strengths</div>
+        <div class="pills">
+          <span class="pill">Financial Analysis</span><span class="pill">Investment Research</span><span class="pill">Financial Reporting</span>
+          <span class="pill">Auditing</span><span class="pill">Excel & Data Analysis</span><span class="pill">Project Management</span>
+          <span class="pill">Communication</span><span class="pill">Public Speaking</span><span class="pill">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-kicker">Hands-on exposure across financial reporting, investment research, auditing and analytical workflows.</p>
+    </div>
+    <div class="timeline">
+      <article class="item">
+        <div class="date">May 2026 — Aug 2026</div>
+        <div>
+          <h3>Finance & Accounts Intern</h3>
+          <h4>Nippon India Mutual Fund</h4>
+          <p>Worked across financial verification, investment research and analytical reporting workflows.</p><ul class="role-list"><li>Verified financial statements and supported peer benchmarking.</li><li>Researched portfolio and investment data and analyzed transaction costs.</li><li>Used advanced Excel techniques for financial-data analysis and organization.</li><li>Contributed to multi-level auditing and reconciliation workflows.</li><li>Gained exposure to an intelligent document processing prototype for financial-data extraction.</li></ul>
+        </div>
+        <div class="tag">Finance</div>
+      </article>
+      <article class="item">
+        <div class="date">Jul 2025 — Aug 2025</div>
+        <div>
+          <h3>Report Writing Intern</h3>
+          <h4>Coeus Advisors Pvt. Ltd.</h4>
+          <p>Conducted structured research and translated findings into analytical reports on financial and infrastructure investment topics.</p><ul class="role-list"><li>Researched REITs and InvITs in the Indian market.</li><li>Explored Battery Energy Storage Systems (BESS) and related investment themes in India.</li><li>Prepared clear, research-backed reports for business and investment-oriented topics.</li></ul>
+        </div>
+        <div class="tag">Research</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Selected projects</h2>
+      <p class="section-kicker">Academic and extracurricular work that reflects research, presentation and analytical skills.</p>
+    </div>
+    <div class="project-grid">
+      <article class="project">
+        <div>
+          <div class="project-number">01 / Research</div>
+          <h3>EUMIND Human Rights Project</h3>
+          <p>Conducted cross-cultural research on global unemployment as part of the EUMIND Human Rights Online Project. Developed and presented actionable solutions through the “Remove UN from Unemployment” project.</p>
+        </div>
+        <div class="small">International collaborative research · 2020–2021</div><div class="project-meta"><span>Research</span><span>Presentation</span><span>Cross-cultural collaboration</span></div>
+      </article>
+      <article class="project">
+        <div>
+          <div class="project-number">02 / Finance</div>
+          <h3>Mutual Fund Analytics</h3>
+          <p>Worked with AMC financial and investment data, including TER, AUM, realisation and peer-comparison information. Used Excel formulas, lookups and Pivot Tables to organize and analyze financial datasets.</p>
+        </div>
+        <div class="small">Internship-based analytical work · 2026</div><div class="project-meta"><span>Excel</span><span>Financial analysis</span><span>Peer comparison</span></div>
+      </article>
+      <article class="project">
+        <div>
+          <div class="project-number">03 / Observation</div>
+          <h3>Wildlife Photography</h3>
+          <p>Submitted geo-tagged photographs of endangered species for the “Flicks & Frames” competition, demonstrating observation skills and visual storytelling.</p>
+        </div>
+        <div class="small">Genesis 2025 · Observation Skills</div><div class="project-meta"><span>Wildlife</span><span>Visual storytelling</span><span>Observation</span></div>
+      </article>
+      <article class="project">
+        <div>
+          <div class="project-number">04 / Public speaking</div>
+          <h3>JAM — Just A Minute</h3>
+          <p>Placed 2nd in an intercollegiate JAM competition, demonstrating spontaneous speaking, confidence and articulation.</p>
+        </div>
+        <div class="small">Olé Lakshana 2025 · Public Speaking</div><div class="project-meta"><span>JAM</span><span>Confidence</span><span>Articulation</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Education</h2>
+      <p class="section-kicker">A multidisciplinary academic foundation spanning business, finance, analytics and life sciences.</p>
+    </div>
+    <div class="edu">
+      <div class="edu-card"><h3>Atlas SkillTech University</h3><p>Bachelor of Business Administration · Finance Major, Business Analytics Minor · 2025 — Present</p></div>
+      <div class="edu-card"><h3>Wilson College</h3><p>Bachelor of Science · Zoology & Microbiology · 2024 — 2025</p></div>
+      <div class="edu-card"><h3>Prakash College of Commerce and Science</h3><p>11th & 12th Grade · 2022 — 2024</p></div>
+      <div class="edu-card"><h3>N. L. Dalmia High School</h3><p>2nd Grade to 10th Grade · 2015 — 2022</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Skills & tools</h2>
+      <p class="section-kicker">A growing toolkit built through coursework, internships and independent learning.</p>
+    </div>
+    <div class="skills">
+      <div class="skill-card"><h3>Finance</h3><p>Financial reporting · Investment research · Auditing · Peer benchmarking · Portfolio analysis · Transaction-cost analysis</p></div>
+      <div class="skill-card"><h3>Analytics</h3><p>Microsoft Excel · Pivot Tables · Lookups · Power BI (learning) · Financial data analysis · Data-driven decision-making · Structured research</p></div>
+      <div class="skill-card"><h3>Creative & professional</h3><p>Canva · Adobe Photoshop · Presentation · Public speaking · Project management · Communication · Networking</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="container">
+    <div class="career-box">
+      <h3>What I am building toward</h3>
+      <p>My portfolio reflects a growing interest in roles where finance, analytics and business strategy overlap. I am continuing to strengthen my ability to research financial topics, interpret data, communicate insights clearly and apply structured analysis to real business questions.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">A little more about me</h2>
+      <p class="section-kicker">How I approach learning, collaboration and professional growth.</p>
+    </div>
+    <p style="max-width:760px;font-size:18px;color:#454545;margin:0">
+      Based in Mumbai, India · BBA Finance major with a Business Analytics minor. I enjoy working with people, learning from different perspectives, and contributing to collaborative projects while building practical skills in finance, analytics and strategy.
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Let's connect.</h2>
+      <p class="section-kicker" style="color:#d9dfdb">Open to connecting with people in finance, analytics, strategy and business.</p>
+    </div>
+    <div class="contact-copy">
+      <p>Whether you are reaching out about finance, analytics, research or a potential opportunity, I would be happy to connect.</p>
+      <div class="contact-grid">
+        <div class="contact-card"><strong>Email</strong><a href="mailto:trishaneerajtiwari@gmail.com?subject=Portfolio%20Enquiry">trishaneerajtiwari@gmail.com</a></div>
+        <div class="contact-card"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/trishatiwari26/" target="_blank" rel="noopener">linkedin.com/in/trishatiwari26</a></div>
+      </div>
+      <div class="buttons">
+        
+        <a class="btn" style="border-color:white;color:white" href="https://www.linkedin.com/in/trishatiwari26/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+      </div>
+      <p class="contact-note">Based on Mumbai, India · BBA Finance major with Business Analytics minor</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="container">
+  <span>© 2026 Trisha Tiwari</span>
+  <span>Finance · Analytics · Strategy</span>
+</footer>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const id = this.getAttribute("href");
+
+      if (id === "#") {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        history.replaceState(null, "", "#");
+        return;
+      }
+
+      const target = document.querySelector(id);
+      if (!target) return;
+
+      event.preventDefault();
+      const nav = document.querySelector("nav");
+      const offset = nav ? nav.offsetHeight + 12 : 12;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({ top: top, behavior: "smooth" });
+      history.replaceState(null, "", id);
+    });
+  });
+
+  document.querySelectorAll(".email-btn").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const email = "trishaneerajtiwari@gmail.com";
+      const subject = "Portfolio Enquiry";
+      window.location.href = "mailto:" + email + "?subject=" + encodeURIComponent(subject);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
